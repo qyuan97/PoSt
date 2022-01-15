@@ -2,7 +2,6 @@
 simple implementation of PoSt.
 
 ## Requirements
-* Crypto++
 
 ## Build
 
