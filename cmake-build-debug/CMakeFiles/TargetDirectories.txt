@@ -1,6 +1,0 @@
-/Users/xieqingyuan/code/PoSt/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/xieqingyuan/code/PoSt/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/xieqingyuan/code/PoSt/cmake-build-debug/tests/CMakeFiles/rebuild_cache.dir
-/Users/xieqingyuan/code/PoSt/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
-/Users/xieqingyuan/code/PoSt/cmake-build-debug/tests/CMakeFiles/hmac.dir
-/Users/xieqingyuan/code/PoSt/cmake-build-debug/tests/CMakeFiles/sha3.dir

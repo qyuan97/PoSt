@@ -1,6 +1,0 @@
-/Users/xieqingyuan/code/PoSt/CMakeFiles/rebuild_cache.dir
-/Users/xieqingyuan/code/PoSt/CMakeFiles/edit_cache.dir
-/Users/xieqingyuan/code/PoSt/tests/CMakeFiles/rebuild_cache.dir
-/Users/xieqingyuan/code/PoSt/tests/CMakeFiles/edit_cache.dir
-/Users/xieqingyuan/code/PoSt/tests/CMakeFiles/hmac.dir
-/Users/xieqingyuan/code/PoSt/tests/CMakeFiles/sha3.dir
