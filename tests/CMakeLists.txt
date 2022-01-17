@@ -6,3 +6,6 @@ target_link_libraries(hmac cryptopp)
 
 add_executable(rsa rsa.cpp)
 target_link_libraries(rsa cryptopp)
+
+add_executable(post PoSt.cpp)
+target_link_libraries(post cryptopp)

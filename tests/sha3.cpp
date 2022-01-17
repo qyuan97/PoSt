@@ -39,6 +39,5 @@ int main (int argc, char* argv[])
     else
         std::cout << "Failed to verify hash over message" << std::endl;
 
-
     return 0;
 }
