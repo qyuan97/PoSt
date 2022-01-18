@@ -78,8 +78,20 @@ void PoR_setup(std::string PoR_sk[], int n){
     }
 }
 
+void TDF_setup(CryptoPP::Integer p, CryptoPP::Integer q){
+    CryptoPP::Integer pk = p * q;
+    CryptoPP::Integer one(1);
+    CryptoPP::Integer sk = (p - one) * (q - one);
+}
+
+// TODO Trapdoor delay function
+std::string TDF_TrapEval(std::string msg){
+    e = 1 << t;
+    e = e % sk;
+}
+
 // TODO Store
-void store(std::string Por_sk[]){
+void store(std::string Por_sk[], std::string file, CryptoPP::Integer p, CryptoPP::Integer q, int post_k, int por_l){
 
     std::vector<std::string> challenge_set;
     std::vector<std::string> verify_set;
