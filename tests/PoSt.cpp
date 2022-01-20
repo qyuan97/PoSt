@@ -4,9 +4,11 @@
 #include<cryptopp/rsa.h>
 #include<cryptopp/osrng.h>
 #include<cryptopp/hex.h>
-#include <cryptopp/hmac.h>
-#include <cryptopp/sha3.h>
-#include <cryptopp/files.h>
+#include<cryptopp/hmac.h>
+#include<cryptopp/sha3.h>
+#include<cryptopp/modarith.h>
+#include<cryptopp/files.h>
+#include<time.h>
 #include<iostream>
 #include<vector>
 
@@ -78,17 +80,29 @@ void PoR_setup(std::string PoR_sk[], int n){
     }
 }
 
-void TDF_setup(CryptoPP::Integer p, CryptoPP::Integer q){
+std::pair<CryptoPP::Integer, CryptoPP::Integer> TDF_setup(CryptoPP::Integer p, CryptoPP::Integer q){
     CryptoPP::Integer pk = p * q;
     CryptoPP::Integer one(1);
     CryptoPP::Integer sk = (p - one) * (q - one);
+    return std::make_pair(pk,sk);
 }
 
-// TODO Trapdoor delay function
-std::string TDF_TrapEval(std::string msg){
-    e = 1 << t;
+CryptoPP::Integer TDF_TrapEval(std::string msg, int t, CryptoPP::Integer pk, CryptoPP::Integer sk){
+    CryptoPP::Integer e(1 << t);
     e = e % sk;
+    CryptoPP::Integer x(msg.c_str());
+    CryptoPP::ModularArithmetic ma(pk);
+    return ma.Exponentiate(x, e);
 }
+
+CryptoPP::Integer TDF_Eval(std::string msg, int t, CryptoPP::Integer pk){
+    CryptoPP::Integer g(msg.c_str());
+    for(int i = 0; i < (1 << t); i++){
+        g = (g * g) % pk;
+    }
+    return g;
+}
+
 
 // TODO Store
 void store(std::string Por_sk[], std::string file, CryptoPP::Integer p, CryptoPP::Integer q, int post_k, int por_l){
@@ -117,7 +131,6 @@ int main (int argc, char* argv[])
     const CryptoPP::Integer p = pq.first;
     const CryptoPP::Integer q = pq.second;
 
-
 //    std::cout << "PoR_sk[0]: " << PoR_sk[0] << std::endl;
 
 //    std::cout << "p: " << p << std::endl;
@@ -133,5 +146,22 @@ int main (int argc, char* argv[])
 //    std::string cipher = hmac_sha3(PoR_sk[0], msg);
 //    std::cout << cipher << std::endl;
 
+    auto keys = TDF_setup(p, q);
+    const CryptoPP::Integer pk = keys.first;
+    const CryptoPP::Integer sk = keys.second;
+
+    // Test of Trapdoor delay function implementation
+//    std::string msg = "Yoda said, Do or do not. There is no try.";
+//    clock_t trap_start = clock();
+//    CryptoPP::Integer trap_re = TDF_TrapEval(msg, 720 , pk, sk);
+//    clock_t trap_finish = clock();
+//    std::cout << "Trapdoor evaluation Time: " << (trap_finish - trap_start) << "s." << std::endl;
+//    clock_t eval_start = clock();
+//    CryptoPP::Integer re = TDF_Eval(msg, 720, pk);
+//    clock_t eval_finish = clock();
+//    std::cout << "Evaluation Time: " << (eval_finish - eval_start) << "s." << std::endl;
+//    if(trap_re == re){
+//        std::cout << "Evaluation Success." << std::endl;
+//    }
     return 0;
 }
