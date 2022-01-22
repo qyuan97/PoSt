@@ -11,6 +11,7 @@
 #include<time.h>
 #include<iostream>
 #include<vector>
+#include <sstream>
 
 std::string sha3_256(std::string msg){
     std::string digest;
@@ -105,13 +106,30 @@ CryptoPP::Integer TDF_Eval(std::string msg, int t, CryptoPP::Integer pk){
 
 
 // TODO Store
-void store(std::string Por_sk[], std::string file, CryptoPP::Integer p, CryptoPP::Integer q, int post_k, int por_l){
+std::pair<std::vector<std::string>, std::vector<std::string>> store(std::string Por_sk[], std::string file, CryptoPP::Integer pk, CryptoPP::Integer sk, int post_k, int por_l){
 
     std::vector<std::string> challenge_set;
     std::vector<std::string> verify_set;
     challenge_set.clear();
     verify_set.clear();
 
+    for(int i = 0; i < por_l; i++){
+        std::string challenge = Por_sk[i];
+        for(int j = 0; j < post_k; j++){
+            std::string verify = hmac_sha3(challenge, file);
+            verify_set.emplace_back(verify);
+            std::string u = sha3_256(verify);
+
+            CryptoPP::Integer d_value = TDF_TrapEval(u, post_k, pk, sk);
+            std::stringstream ss;
+            ss << std::hex  << d_value;
+            std::string d = ss.str();
+
+            challenge = sha3_256(d);
+        }
+        challenge_set.emplace_back(challenge);
+    }
+    return std::make_pair(challenge_set, verify_set);
 }
 
 // TODO Verification
