@@ -105,7 +105,7 @@ CryptoPP::Integer TDF_Eval(std::string msg, int t, CryptoPP::Integer pk){
 }
 
 
-// TODO Store
+// TODO store procedure
 std::pair<std::vector<std::string>, std::vector<std::string>> store(std::string Por_sk[], std::string file, CryptoPP::Integer pk, CryptoPP::Integer sk, int post_k, int por_l){
 
     std::vector<std::string> challenge_set;
@@ -132,9 +132,24 @@ std::pair<std::vector<std::string>, std::vector<std::string>> store(std::string 
     return std::make_pair(challenge_set, verify_set);
 }
 
-// TODO Verification
-void prove(){
+// TODO prove procedure
+std::pair<std::vector<std::string>, std::vector<std::string>> prove(std::string challenge, std::string file, int post_k, CryptoPP::Integer pk, CryptoPP::Integer sk){
+    std::vector<std::string> challenge_set;
+    std::vector<std::string> prove_set;
+    for(int i = 0; i < post_k; i++){
+        challenge_set.emplace_back(challenge);
+        std::string prove = hmac_sha3(challenge, file);
+        prove_set.emplace_back(prove);
+        std::string u = sha3_256(prove);
 
+        CryptoPP::Integer d_value = TDF_Eval(u, post_k, pk);
+        std::stringstream ss;
+        ss << std::hex  << d_value;
+        std::string d = ss.str();
+
+        challenge = sha3_256(d);
+    }
+    return std::make_pair(challenge_set, prove_set);
 }
 
 int main (int argc, char* argv[])
