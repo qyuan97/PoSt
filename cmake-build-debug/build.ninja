@@ -103,6 +103,7 @@ build cmake_object_order_depends_target_sha3: phony || tests/CMakeFiles/sha3.dir
 build tests/CMakeFiles/sha3.dir/sha3.cpp.o: CXX_COMPILER__sha3_Debug /home/qy/Desktop/PoSt/tests/sha3.cpp || cmake_object_order_depends_target_sha3
   DEP_FILE = tests/CMakeFiles/sha3.dir/sha3.cpp.o.d
   FLAGS = -g -std=gnu++11
+  INCLUDES = -I/home/qy/Desktop/PoSt/include -I/home/qy/Desktop/PoSt/tinymt64/include
   OBJECT_DIR = tests/CMakeFiles/sha3.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/sha3.dir
 
@@ -136,6 +137,7 @@ build cmake_object_order_depends_target_post: phony || tests/CMakeFiles/post.dir
 build tests/CMakeFiles/post.dir/PoSt.cpp.o: CXX_COMPILER__post_Debug /home/qy/Desktop/PoSt/tests/PoSt.cpp || cmake_object_order_depends_target_post
   DEP_FILE = tests/CMakeFiles/post.dir/PoSt.cpp.o.d
   FLAGS = -g -std=gnu++11
+  INCLUDES = -I/home/qy/Desktop/PoSt/include -I/home/qy/Desktop/PoSt/tinymt64/include
   OBJECT_DIR = tests/CMakeFiles/post.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/post.dir
 
@@ -169,6 +171,7 @@ build cmake_object_order_depends_target_hmac: phony || tests/CMakeFiles/hmac.dir
 build tests/CMakeFiles/hmac.dir/hmac_sha3.cpp.o: CXX_COMPILER__hmac_Debug /home/qy/Desktop/PoSt/tests/hmac_sha3.cpp || cmake_object_order_depends_target_hmac
   DEP_FILE = tests/CMakeFiles/hmac.dir/hmac_sha3.cpp.o.d
   FLAGS = -g -std=gnu++11
+  INCLUDES = -I/home/qy/Desktop/PoSt/include -I/home/qy/Desktop/PoSt/tinymt64/include
   OBJECT_DIR = tests/CMakeFiles/hmac.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/hmac.dir
 
@@ -202,6 +205,7 @@ build cmake_object_order_depends_target_rsa: phony || tests/CMakeFiles/rsa.dir
 build tests/CMakeFiles/rsa.dir/rsa.cpp.o: CXX_COMPILER__rsa_Debug /home/qy/Desktop/PoSt/tests/rsa.cpp || cmake_object_order_depends_target_rsa
   DEP_FILE = tests/CMakeFiles/rsa.dir/rsa.cpp.o.d
   FLAGS = -g -std=gnu++11
+  INCLUDES = -I/home/qy/Desktop/PoSt/include -I/home/qy/Desktop/PoSt/tinymt64/include
   OBJECT_DIR = tests/CMakeFiles/rsa.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/rsa.dir
 
@@ -224,15 +228,143 @@ build tests/rsa: CXX_EXECUTABLE_LINKER__rsa_Debug tests/CMakeFiles/rsa.dir/rsa.c
   TARGET_PDB = rsa.dbg
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/qy/Desktop/PoSt/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/qy/Desktop/PoSt/cmake-build-debug/src && /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/qy/Desktop/PoSt -B/home/qy/Desktop/PoSt/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/rebuild_cache: phony src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/qy/Desktop/PoSt/cmake-build-debug/src && /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build src/edit_cache: phony src/CMakeFiles/edit_cache.util
+
+# =============================================================================
+# Object build statements for EXECUTABLE target random_file_generate
+
+
+#############################################
+# Order-only phony target for random_file_generate
+
+build cmake_object_order_depends_target_random_file_generate: phony || cmake_object_order_depends_target_tinymt64
+
+build src/CMakeFiles/random_file_generate.dir/random_file_generate.cpp.o: CXX_COMPILER__random_file_generate_Debug /home/qy/Desktop/PoSt/src/random_file_generate.cpp || cmake_object_order_depends_target_random_file_generate
+  DEP_FILE = src/CMakeFiles/random_file_generate.dir/random_file_generate.cpp.o.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -I/home/qy/Desktop/PoSt/include -I/home/qy/Desktop/PoSt/tinymt64/include -I/home/qy/Desktop/PoSt/src/include -I/home/qy/Desktop/PoSt/src/tinymt64/include
+  OBJECT_DIR = src/CMakeFiles/random_file_generate.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/random_file_generate.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target random_file_generate
+
+
+#############################################
+# Link the executable src/random_file_generate
+
+build src/random_file_generate: CXX_EXECUTABLE_LINKER__random_file_generate_Debug src/CMakeFiles/random_file_generate.dir/random_file_generate.cpp.o | lib/libtinymt64.a /usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.so || lib/libtinymt64.a
+  FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  lib/libtinymt64.a  /usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so  /usr/lib/x86_64-linux-gnu/libpthread.so
+  LINK_PATH = -L/usr/local/lib
+  OBJECT_DIR = src/CMakeFiles/random_file_generate.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = src/random_file_generate
+  TARGET_PDB = random_file_generate.dbg
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/qy/Desktop/PoSt/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build tinymt64/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/qy/Desktop/PoSt/cmake-build-debug/tinymt64 && /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/qy/Desktop/PoSt -B/home/qy/Desktop/PoSt/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build tinymt64/rebuild_cache: phony tinymt64/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build tinymt64/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/qy/Desktop/PoSt/cmake-build-debug/tinymt64 && /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build tinymt64/edit_cache: phony tinymt64/CMakeFiles/edit_cache.util
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target tinymt64
+
+
+#############################################
+# Order-only phony target for tinymt64
+
+build cmake_object_order_depends_target_tinymt64: phony || tinymt64/CMakeFiles/tinymt64.dir
+
+build tinymt64/CMakeFiles/tinymt64.dir/tinymt64.c.o: C_COMPILER__tinymt64_Debug /home/qy/Desktop/PoSt/tinymt64/tinymt64.c || cmake_object_order_depends_target_tinymt64
+  DEP_FILE = tinymt64/CMakeFiles/tinymt64.dir/tinymt64.c.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/qy/Desktop/PoSt/include -I/home/qy/Desktop/PoSt/tinymt64/include
+  OBJECT_DIR = tinymt64/CMakeFiles/tinymt64.dir
+  OBJECT_FILE_DIR = tinymt64/CMakeFiles/tinymt64.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target tinymt64
+
+
+#############################################
+# Link the static library lib/libtinymt64.a
+
+build lib/libtinymt64.a: C_STATIC_LIBRARY_LINKER__tinymt64_Debug tinymt64/CMakeFiles/tinymt64.dir/tinymt64.c.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = tinymt64/CMakeFiles/tinymt64.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libtinymt64.a
+  TARGET_PDB = tinymt64.a.dbg
+
+# =============================================================================
 # Target aliases.
 
 build hmac: phony tests/hmac
 
+build libtinymt64.a: phony lib/libtinymt64.a
+
 build post: phony tests/post
+
+build random_file_generate: phony src/random_file_generate
 
 build rsa: phony tests/rsa
 
 build sha3: phony tests/sha3
+
+build tinymt64: phony lib/libtinymt64.a
 
 # =============================================================================
 # Folder targets.
@@ -242,7 +374,14 @@ build sha3: phony tests/sha3
 #############################################
 # Folder: /home/qy/Desktop/PoSt/cmake-build-debug
 
-build all: phony tests/all
+build all: phony tests/all src/all tinymt64/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/qy/Desktop/PoSt/cmake-build-debug/src
+
+build src/all: phony src/random_file_generate
 
 # =============================================================================
 
@@ -252,20 +391,27 @@ build all: phony tests/all
 build tests/all: phony tests/sha3 tests/post tests/hmac tests/rsa
 
 # =============================================================================
+
+#############################################
+# Folder: /home/qy/Desktop/PoSt/cmake-build-debug/tinymt64
+
+build tinymt64/all: phony lib/libtinymt64.a
+
+# =============================================================================
 # Built-in targets
 
 
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../tests/CMakeLists.txt /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU-C.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU-C.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU-CXX.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../src/CMakeLists.txt ../tests/CMakeLists.txt ../tinymt64/CMakeLists.txt /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeParseImplicitLinkInfo.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU-C.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/FindOpenMP.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/FindPackageMessage.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU-C.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU-CXX.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../tests/CMakeLists.txt /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU-C.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU-C.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU-CXX.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../src/CMakeLists.txt ../tests/CMakeLists.txt ../tinymt64/CMakeLists.txt /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeParseImplicitLinkInfo.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU-C.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/FindOpenMP.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/FindPackageMessage.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU-C.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU-CXX.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux.cmake /home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/share/cmake-3.21/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake: phony
 
 
 #############################################

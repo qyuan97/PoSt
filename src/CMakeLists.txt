@@ -1,0 +1,5 @@
+include_directories(include tinymt64/include include)
+
+add_executable(random_file_generate random_file_generate.cpp)
+target_link_libraries(random_file_generate OpenMP::OpenMP_C)
+target_link_libraries(random_file_generate tinymt64)
