@@ -129,6 +129,7 @@ std::pair<std::vector<std::string>, std::vector<std::string>> store(std::string 
         }
         challenge_set.emplace_back(challenge);
     }
+    std::cout << std::endl;
     return std::make_pair(challenge_set, verify_set);
 }
 
@@ -188,13 +189,22 @@ int main (int argc, char* argv[])
 //    clock_t trap_start = clock();
 //    CryptoPP::Integer trap_re = TDF_TrapEval(msg, 720 , pk, sk);
 //    clock_t trap_finish = clock();
-//    std::cout << "Trapdoor evaluation Time: " << (trap_finish - trap_start) << "s." << std::endl;
+//    std::cout << "Trapdoor evaluation Time: " << (trap_finish - trap_start)/CLOCKS_PER_SEC << "s." << std::endl;
 //    clock_t eval_start = clock();
 //    CryptoPP::Integer re = TDF_Eval(msg, 720, pk);
 //    clock_t eval_finish = clock();
-//    std::cout << "Evaluation Time: " << (eval_finish - eval_start) << "s." << std::endl;
+//    std::cout << "Evaluation Time: " << (eval_finish - eval_start)/CLOCKS_PER_SEC << "s." << std::endl;
 //    if(trap_re == re){
 //        std::cout << "Evaluation Success." << std::endl;
 //    }
+
+    int post_k = 100;
+    int por_l = 10;
+    std::string file(64*1024*1024, '0');
+    clock_t store_start = clock();
+    auto tag= store(PoR_sk, file, pk, sk, post_k, por_l);
+    clock_t store_end = clock();
+    std::cout << "Store Time: " << (store_end - store_start) / CLOCKS_PER_SEC << "s." << std::endl;
+
     return 0;
 }

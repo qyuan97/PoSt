@@ -8,6 +8,7 @@
 /home/qy/Desktop/PoSt/cmake-build-debug/tests/CMakeFiles/rsa.dir
 /home/qy/Desktop/PoSt/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
 /home/qy/Desktop/PoSt/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+/home/qy/Desktop/PoSt/cmake-build-debug/src/CMakeFiles/random_file_read.dir
 /home/qy/Desktop/PoSt/cmake-build-debug/src/CMakeFiles/random_file_generate.dir
 /home/qy/Desktop/PoSt/cmake-build-debug/tinymt64/CMakeFiles/rebuild_cache.dir
 /home/qy/Desktop/PoSt/cmake-build-debug/tinymt64/CMakeFiles/edit_cache.dir

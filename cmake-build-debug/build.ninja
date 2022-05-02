@@ -113,16 +113,16 @@ build tests/CMakeFiles/sha3.dir/sha3.cpp.o: CXX_COMPILER__sha3_Debug /home/qy/De
 
 
 #############################################
-# Link the executable tests/sha3
+# Link the executable bin/sha3
 
-build tests/sha3: CXX_EXECUTABLE_LINKER__sha3_Debug tests/CMakeFiles/sha3.dir/sha3.cpp.o
+build bin/sha3: CXX_EXECUTABLE_LINKER__sha3_Debug tests/CMakeFiles/sha3.dir/sha3.cpp.o
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  -lcryptopp
   LINK_PATH = -L/usr/local/lib
   OBJECT_DIR = tests/CMakeFiles/sha3.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = tests/sha3
+  TARGET_FILE = bin/sha3
   TARGET_PDB = sha3.dbg
 
 # =============================================================================
@@ -147,16 +147,16 @@ build tests/CMakeFiles/post.dir/PoSt.cpp.o: CXX_COMPILER__post_Debug /home/qy/De
 
 
 #############################################
-# Link the executable tests/post
+# Link the executable bin/post
 
-build tests/post: CXX_EXECUTABLE_LINKER__post_Debug tests/CMakeFiles/post.dir/PoSt.cpp.o
+build bin/post: CXX_EXECUTABLE_LINKER__post_Debug tests/CMakeFiles/post.dir/PoSt.cpp.o
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  -lcryptopp
   LINK_PATH = -L/usr/local/lib
   OBJECT_DIR = tests/CMakeFiles/post.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = tests/post
+  TARGET_FILE = bin/post
   TARGET_PDB = post.dbg
 
 # =============================================================================
@@ -181,16 +181,16 @@ build tests/CMakeFiles/hmac.dir/hmac_sha3.cpp.o: CXX_COMPILER__hmac_Debug /home/
 
 
 #############################################
-# Link the executable tests/hmac
+# Link the executable bin/hmac
 
-build tests/hmac: CXX_EXECUTABLE_LINKER__hmac_Debug tests/CMakeFiles/hmac.dir/hmac_sha3.cpp.o
+build bin/hmac: CXX_EXECUTABLE_LINKER__hmac_Debug tests/CMakeFiles/hmac.dir/hmac_sha3.cpp.o
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  -lcryptopp
   LINK_PATH = -L/usr/local/lib
   OBJECT_DIR = tests/CMakeFiles/hmac.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = tests/hmac
+  TARGET_FILE = bin/hmac
   TARGET_PDB = hmac.dbg
 
 # =============================================================================
@@ -215,16 +215,16 @@ build tests/CMakeFiles/rsa.dir/rsa.cpp.o: CXX_COMPILER__rsa_Debug /home/qy/Deskt
 
 
 #############################################
-# Link the executable tests/rsa
+# Link the executable bin/rsa
 
-build tests/rsa: CXX_EXECUTABLE_LINKER__rsa_Debug tests/CMakeFiles/rsa.dir/rsa.cpp.o
+build bin/rsa: CXX_EXECUTABLE_LINKER__rsa_Debug tests/CMakeFiles/rsa.dir/rsa.cpp.o
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  -lcryptopp
   LINK_PATH = -L/usr/local/lib
   OBJECT_DIR = tests/CMakeFiles/rsa.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = tests/rsa
+  TARGET_FILE = bin/rsa
   TARGET_PDB = rsa.dbg
 
 # =============================================================================
@@ -256,6 +256,39 @@ build src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
 build src/edit_cache: phony src/CMakeFiles/edit_cache.util
 
 # =============================================================================
+# Object build statements for EXECUTABLE target random_file_read
+
+
+#############################################
+# Order-only phony target for random_file_read
+
+build cmake_object_order_depends_target_random_file_read: phony || src/CMakeFiles/random_file_read.dir
+
+build src/CMakeFiles/random_file_read.dir/random_file_read.cpp.o: CXX_COMPILER__random_file_read_Debug /home/qy/Desktop/PoSt/src/random_file_read.cpp || cmake_object_order_depends_target_random_file_read
+  DEP_FILE = src/CMakeFiles/random_file_read.dir/random_file_read.cpp.o.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -I/home/qy/Desktop/PoSt/include -I/home/qy/Desktop/PoSt/tinymt64/include -I/home/qy/Desktop/PoSt/src/include -I/home/qy/Desktop/PoSt/src/tinymt64/include
+  OBJECT_DIR = src/CMakeFiles/random_file_read.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/random_file_read.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target random_file_read
+
+
+#############################################
+# Link the executable bin/random_file_read
+
+build bin/random_file_read: CXX_EXECUTABLE_LINKER__random_file_read_Debug src/CMakeFiles/random_file_read.dir/random_file_read.cpp.o
+  FLAGS = -g
+  LINK_PATH = -L/usr/local/lib
+  OBJECT_DIR = src/CMakeFiles/random_file_read.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = bin/random_file_read
+  TARGET_PDB = random_file_read.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target random_file_generate
 
 
@@ -277,16 +310,16 @@ build src/CMakeFiles/random_file_generate.dir/random_file_generate.cpp.o: CXX_CO
 
 
 #############################################
-# Link the executable src/random_file_generate
+# Link the executable bin/random_file_generate
 
-build src/random_file_generate: CXX_EXECUTABLE_LINKER__random_file_generate_Debug src/CMakeFiles/random_file_generate.dir/random_file_generate.cpp.o | lib/libtinymt64.a /usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.so || lib/libtinymt64.a
+build bin/random_file_generate: CXX_EXECUTABLE_LINKER__random_file_generate_Debug src/CMakeFiles/random_file_generate.dir/random_file_generate.cpp.o | lib/libtinymt64.a /usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.so || lib/libtinymt64.a
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  lib/libtinymt64.a  /usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so  /usr/lib/x86_64-linux-gnu/libpthread.so
   LINK_PATH = -L/usr/local/lib
   OBJECT_DIR = src/CMakeFiles/random_file_generate.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = src/random_file_generate
+  TARGET_FILE = bin/random_file_generate
   TARGET_PDB = random_file_generate.dbg
 
 # =============================================================================
@@ -352,17 +385,19 @@ build lib/libtinymt64.a: C_STATIC_LIBRARY_LINKER__tinymt64_Debug tinymt64/CMakeF
 # =============================================================================
 # Target aliases.
 
-build hmac: phony tests/hmac
+build hmac: phony bin/hmac
 
 build libtinymt64.a: phony lib/libtinymt64.a
 
-build post: phony tests/post
+build post: phony bin/post
 
-build random_file_generate: phony src/random_file_generate
+build random_file_generate: phony bin/random_file_generate
 
-build rsa: phony tests/rsa
+build random_file_read: phony bin/random_file_read
 
-build sha3: phony tests/sha3
+build rsa: phony bin/rsa
+
+build sha3: phony bin/sha3
 
 build tinymt64: phony lib/libtinymt64.a
 
@@ -381,14 +416,14 @@ build all: phony tests/all src/all tinymt64/all
 #############################################
 # Folder: /home/qy/Desktop/PoSt/cmake-build-debug/src
 
-build src/all: phony src/random_file_generate
+build src/all: phony bin/random_file_read bin/random_file_generate
 
 # =============================================================================
 
 #############################################
 # Folder: /home/qy/Desktop/PoSt/cmake-build-debug/tests
 
-build tests/all: phony tests/sha3 tests/post tests/hmac tests/rsa
+build tests/all: phony bin/sha3 bin/post bin/hmac bin/rsa
 
 # =============================================================================
 
