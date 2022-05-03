@@ -4,7 +4,7 @@
 
 #ifndef POST_TOOLKIT_H
 #define POST_TOOLKIT_H
-
+#include<memory.h>
 #include<cstdio>
 #include<cstdlib>
 #include<unistd.h>

@@ -1,9 +1,0 @@
-# ninja log v5
-0	31	1650465148219995148	tinymt64/CMakeFiles/tinymt64.dir/tinymt64.c.o	ae07790d7460282c
-0	55	1650527643403959775	src/CMakeFiles/random_file_generate.dir/random_file_generate.cpp.o	e79a898aa361acd5
-0	729	1650464834635995326	tests/CMakeFiles/rsa.dir/rsa.cpp.o	336eeaee911dae03
-730	1060	1650464834967995326	tests/rsa	20cb843144869fcf
-31	38	1650465148227995148	lib/libtinymt64.a	64d8f23a813fe0cf
-1054	1465	1651219066240706810	bin/post	93b27d10edb7610b
-55	84	1650527643431959775	src/random_file_generate	ce5cca5cda63201b
-0	1054	1651219065832714561	tests/CMakeFiles/post.dir/PoSt.cpp.o	2cfaf1211341cf8c

@@ -1,4 +1,0 @@
-/home/qy/Desktop/CLion/clion-2021.3.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/qy/Desktop/CLion/clion-2021.3.2/bin/ninja/linux/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja /home/qy/Desktop/PoSt
--- Configuring done
--- Generating done
--- Build files have been written to: /home/qy/Desktop/PoSt/cmake-build-debug

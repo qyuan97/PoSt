@@ -5,3 +5,4 @@ target_link_libraries(random_file_generate OpenMP::OpenMP_C)
 target_link_libraries(random_file_generate tinymt64)
 
 add_executable(random_file_read random_file_read.cpp)
+target_link_libraries(random_file_read tinymt64)
